@@ -21,17 +21,18 @@ gantt
         JAVA: one_java, 2025-01-01, 12w
         MySQL: one_mysql, 2025-01-01, 12w
     section Content Bot
-        Bot Basic: bot_content_basic, after one_mysql, 8w
-        PG basic: bot_pg_basic, after one_mysql, 8w
-        Bot medium: bot_content_med, after behave_eval, 14w
-        PG medium: bot_pg_med, after behave_eval, 14w
+        Bot Basic: bot_content_basic, 2025-01-01, 12w
+        PG basic: bot_pg_basic, 2025-01-01, 12w
+        Bot medium: bot_content_med, after eval_behave, 14w
+        PG medium: bot_pg_med, after eval_behave, 14w
         Bot Avançado: bot_content_adv, after bot_content_med, 14w
         PG advanced: bot_pg_adv, after bot_content_med, 14w
     section Equipe Plataforma
-        Seleção: eval_behave, after bot_content_basic, 2w
-        DevMath: eval_dev, after bot_content_basic, 2w
+        Seleção: eval_behave, after eval_dev, 2w
+        Entrevista: behave_eval_final, after prj_tcc, 2w
+        Feedback: team_feedback, after behave_eval_final, 2w
     section Mentoria
-        Intro: ment_intro, after behave_eval, 2w
+        Intro: ment_intro, after eval_dev, 2w
         SO: ment_SO, after ment_intro, 2w
         Infra: ment_infra, after ment_SO, 1w
         Code: ment_coding, after ment_infra, 3w
@@ -50,11 +51,8 @@ gantt
         Chat-v3: prj_chat_v3, after ment_sql, 4w
         Library: prj_lib, after prj_chat_v3, 4w
         TCC: prj_tcc, after prj_lib, 6w
-    section Equipe Plataforma
-        Entrevista: behave_eval_final, after prj_tcc, 2w
     section DevMatch
-        Teste final: team_eval, after prj_tcc, 2w
-    section Equipe Plataforma
-        Feedback: team_feedback, after behave_eval_final, 2w
+        Adimissão: eval_dev, after bot_content_basic, 2w
+        Teste final: team_eval, after prj_tcc, 2w        
 ```
 
