@@ -27,13 +27,13 @@ gantt
         PG medium: bot_pg_med, after eval_behave, 14w
         Bot Avançado: bot_content_adv, after bot_content_med, 14w
         PG advanced: bot_pg_adv, after bot_content_med, 14w
-    section Equipe Plataforma
-        Seleção: eval_behave, after test_ingress, 2w
-        Entrevista: eval_final, after prj_tcc, 2w
-        Feedback: team_feedback, after behave_eval_final, 2w
     section DevMatch
         Ingress-test: test_ingress, after bot_content_basic, 2w
         Final-test: test_final, after prj_tcc, 2w      
+    section Equipe Plataforma
+        Seleção: eval_behave, after test_ingress, 2w
+        Entrevista: eval_final, after test_final, 2w
+        Feedback: team_feedback, after eval_final, 2w
     section Mentoria
         Intro: ment_intro, after eval_behave, 2w
         SO: ment_SO, after ment_intro, 2w
