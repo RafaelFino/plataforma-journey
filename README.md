@@ -28,11 +28,14 @@ gantt
         Bot Avançado: bot_content_adv, after bot_content_med, 14w
         PG advanced: bot_pg_adv, after bot_content_med, 14w
     section Equipe Plataforma
-        Seleção: eval_behave, after eval_dev, 2w
-        Entrevista: behave_eval_final, after prj_tcc, 2w
+        Seleção: eval_behave, after test_ingress, 2w
+        Entrevista: eval_final, after prj_tcc, 2w
         Feedback: team_feedback, after behave_eval_final, 2w
+    section DevMatch
+        Ingress-test: test_ingress, after bot_content_basic, 2w
+        Final-test: test_final, after prj_tcc, 2w      
     section Mentoria
-        Intro: ment_intro, after eval_dev, 2w
+        Intro: ment_intro, after eval_behave, 2w
         SO: ment_SO, after ment_intro, 2w
         Infra: ment_infra, after ment_SO, 1w
         Code: ment_coding, after ment_infra, 3w
@@ -50,9 +53,6 @@ gantt
         CRUD: prj_crud, after prj_chat_v2, 4w
         Chat-v3: prj_chat_v3, after ment_sql, 4w
         Library: prj_lib, after prj_chat_v3, 4w
-        TCC: prj_tcc, after prj_lib, 6w
-    section DevMatch
-        Adimissão: eval_dev, after bot_content_basic, 2w
-        Teste final: team_eval, after prj_tcc, 2w        
+        TCC: prj_tcc, after prj_lib, 6w  
 ```
 
