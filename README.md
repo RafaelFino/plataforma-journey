@@ -20,12 +20,12 @@ gantt
         Cadastro: one_cad, 0, 1w
         Trilha básica: one_bas, after one_cad, 2w
         Trilha básica: one_med, after one_bas, 2w
-        Trilha básica: one_adv, after one_med, w2
+        Trilha básica: one_adv, after one_med, 2w
     section Content Bot
-        Bot Basic: bot_content_basic, after one_adv, 12w
-        PG basic: bot_pg_basic, after one_adv, 12w
-        Bot medium: bot_content_med, after bot_content_basic, 12w
-        PG medium: bot_pg_med, after bot_content_basic, 12w
+        Bot Basic: bot_content_basic, after one_adv, 4w
+        PG basic: bot_pg_basic, after one_adv, 4w
+        Bot medium: bot_content_med, after behave_eval, 12w
+        PG medium: bot_pg_med, after behave_eval, 12w
         Bot Avançado: bot_content_adv, after bot_content_med, 12w
         PG advanced: bot_pg_adv, after bot_content_med, 12w
     section Equipe Plataforma
@@ -34,23 +34,22 @@ gantt
         Intro: ment_intro, after behave_eval, 2w
         SO: ment_SO, after ment_intro, 2w
         Infra: ment_infra, after ment_SO, 1w
-        Code: ment_coding, after ment_infra, 2w
-        Arch Básica: ment_arch_basic, after ment_coding, 2w
-        Data Struct: ment_data_structure, after ment_arch_basic, 2w        
-        Solution Arch: ment_solution_arch, after ment_data_structure, 2w
-        Data base: ment_sql, after ment_solution_arch, 1w
+        Code: ment_coding, after ment_infra, 3w
+        Arch basics: ment_arch_basic, after ment_coding, 2w
+        Data struct: ment_data_structure, after ment_arch_basic, 3w
+        Solution arch: ment_solution_arch, after ment_data_structure, 3w
+        DB: ment_sql, after ment_solution_arch, 2w
         APIs: ment_apis, after ment_sql, 2w
-        OOP: ment_oop, after ment_apis, 4w
+        OOP: ment_oop, after ment_apis, 7w
         Tests: ment_tests, after ment_oop, 2w
-        Arch Avançada: ment_arch_adv, after ment_tests, 2w
-        Automations: ment_automations, after ment_arch_adv, 2w
+        Automations: ment_automations, after ment_tests, 3w
     section Projetos        
         Chat-v1: prj_chat_v1, after ment_coding, 3w
-        Chat-v2: prj_chat_v2, after ment_data_structure, 2w
-        CRUD: prj_crud, after prj_chat_v2, 3w
-        Chat-v3: prj_chat_v3, after ment_apis, 3w
-        OOP-Biblioteca: prj_lib, after prj_chat_v3, 4w
-        TCC: prj_tcc, after prj_lib, 4w
+        Chat-v2: prj_chat_v2, after prj_chat_v1, 2w
+        CRUD: prj_crud, after prj_chat_v2, 5w
+        Chat-v3: prj_chat_v3, after ment_sql, 4w
+        OOP-Biblioteca: prj_lib, after prj_chat_v3, 3w
+        TCC: prj_tcc, after prj_lib, 6w
     section Equipe Plataforma
         Entrevista: behave_eval_final, after prj_tcc, 2w
     section DevMatch
