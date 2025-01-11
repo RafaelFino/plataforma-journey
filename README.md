@@ -14,41 +14,48 @@ Queremos usando motorores de IA, gerar conteúdos de qualidade, exercícios e te
 ## Nossa trilha
 ```mermaid
 gantt
+    tickInterval 1week
     title Plataforma Journey    
     section Oracle One
-        Cadastro: one_cad, 0, 1d
-        Trilha básica: 30d
-        Trilha básica: 30d
-        Trilha básica: 30d
+        Cadastro: one_cad, 0, 1w
+        Trilha básica: one_bas, after one_cad, 2w
+        Trilha básica: one_med, after one_bas, 2w
+        Trilha básica: one_adv, after one_med, w2
     section Content Bot
-        Bot Conteúdo Básico: bot_content_basic, after one_end, 45d
-        Exercícios Básicos: bot_content_basic, after one_end, 45d
-        Bot Conteúdo Intermediário: bot_content_med, after beheviour_evaluation, 30d
-        Exercícios intermediários: bot_content_med, after beheviour_evaluation, 30d
-        Bot Conteúdo Avançado: bot_content_adv, after bot_content_med, 30d
-        Exercícios avançados: bot_content_adv, after bot_content_med, 30d
-    section Avaliações Equipe Plataforma
-        Avaliação: beheviour_evaluation, after bot_content_basic, 21d
+        Bot Basic: bot_content_basic, after one_end, 4w
+        PG basic: bot_content_basic, after one_end, 4w
+        Bot medium: bot_content_med, after beheviour_evaluation, 4w
+        PG medium: bot_content_med, after beheviour_evaluation, 4w
+        Bot Avançado: bot_content_adv, after bot_content_med, 4w
+        PG advanced: bot_content_adv, after bot_content_med, 4w
+    section Equipe Plataforma
+        Entrevista: behave_eval, after bot_content_basic, 2w
     section Mentoria
-        Mentoria: mentorship, after beheviour_evaluation, 180d
-        Intro: ment_intro, after beheviour_evaluation, 21d
-        SO: ment_SO, after ment_intro, 7d
-        Infra: ment_infra, after ment_SO, 7d        
-        Coding: ment_coding, after ment_infra, 7d
-        Arch Básica: ment_arch_basic, after ment_coding, 14d
-        Data Structures: ment_data_structure, after ment_arch_basic, 14d
-        Data base: ment_sql, after ment_data_structure, 21d
-        Solution Arch: ment_solution_arch, after ment_sql, 14d
-        APIs: ment_apis, after ment_solution_arch, 21d
-        OOP: ment_oop, after ment_apis, 30d
-        Tests: ment_tests, after ment_oop, 7d
-        Arch Avançada: ment_arch_adv, after ment_tests, 14d
+        Intro: ment_intro, after behave_eval, 3w
+        SO: ment_SO, after ment_intro, 1w
+        Infra: ment_infra, after ment_SO, 1w
+        Coding: ment_coding, after ment_infra, 1w
+        Arch Básica: ment_arch_basic, after ment_coding, 2w
+        Data Struct: ment_data_structure, after ment_arch_basic, 2w
+        Data base: ment_sql, after ment_data_structure, 3w
+        Solution Arch: ment_solution_arch, after ment_sql, 2w
+        APIs: ment_apis, after ment_solution_arch, 3w
+        OOP: ment_oop, after ment_apis, 4w
+        Tests: ment_tests, after ment_oop, 2w
+        Arch Avançada: ment_arch_adv, after ment_tests, 2w
+        Automations: ment_automations, after ment_arch_adv, 2w
     section Projetos        
-        Chat-v1: prj_chat_v1, after bot_content_adv, 14d
-        Chat-v2: prj_chat_v2, after prj_chat_v1, 14d
-        CRUD: prj_crud, after prj_chat_v2, 21d        
-        Chat-v3: prj_chat_v3, after prj_crud, 21d
-        OOP-Biblioteca: prj_lib, after prj_chat_v3, 21d
-        TCC: prj_tcc, after prj_lib, 30d
+        Chat-v1: prj_chat_v1, after bot_content_adv, 2w
+        Chat-v2: prj_chat_v2, after prj_chat_v1, 2w
+        CRUD: prj_crud, after prj_chat_v2, 2w
+        Chat-v3: prj_chat_v3, after prj_crud, 3w
+        OOP-Biblioteca: prj_lib, after prj_chat_v3, 4w
+        TCC: prj_tcc, after prj_lib, 4w
+    section Equipe Plataforma
+        Entrevista: behave_eval_final, after prj_tcc, 2w
+    section DevMatch
+        Teste final: team_eval, after prj_tcc, 2w
+    section Equipe Plataforma
+        Entrevista: team_feedback, after prj_tcc, 2w        
 ```
 
