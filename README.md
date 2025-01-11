@@ -14,22 +14,22 @@ Queremos usando motorores de IA, gerar conteúdos de qualidade, exercícios e te
 ## Nossa trilha
 ```mermaid
 gantt
-    tickInterval 1week
     title Plataforma Journey    
+    dateFormat  YYYY-MM-DD
     section Oracle One
-        Cadastro: one_cad, 0, 1w
-        Trilha básica: one_bas, after one_cad, 2w
-        Trilha básica: one_med, after one_bas, 2w
-        Trilha básica: one_adv, after one_med, 2w
+        START: one_start, 2025-01-01, 12w
+        JAVA: one_java, 2025-01-01, 12w
+        MySQL: one_mysql, 2025-01-01, 12w
     section Content Bot
-        Bot Basic: bot_content_basic, after one_adv, 4w
-        PG basic: bot_pg_basic, after one_adv, 4w
-        Bot medium: bot_content_med, after behave_eval, 12w
-        PG medium: bot_pg_med, after behave_eval, 12w
-        Bot Avançado: bot_content_adv, after bot_content_med, 12w
-        PG advanced: bot_pg_adv, after bot_content_med, 12w
+        Bot Basic: bot_content_basic, after one_mysql, 8w
+        PG basic: bot_pg_basic, after one_mysql, 8w
+        Bot medium: bot_content_med, after behave_eval, 14w
+        PG medium: bot_pg_med, after behave_eval, 14w
+        Bot Avançado: bot_content_adv, after bot_content_med, 14w
+        PG advanced: bot_pg_adv, after bot_content_med, 14w
     section Equipe Plataforma
-        Seleção: behave_eval, after bot_content_basic, 2w
+        Seleção: eval_behave, after bot_content_basic, 2w
+        DevMath: eval_dev, after bot_content_basic, 2w
     section Mentoria
         Intro: ment_intro, after behave_eval, 2w
         SO: ment_SO, after ment_intro, 2w
@@ -44,11 +44,11 @@ gantt
         Tests: ment_tests, after ment_oop, 2w
         Automations: ment_automations, after ment_tests, 3w
     section Projetos        
-        Chat-v1: prj_chat_v1, after ment_coding, 3w
+        Chat-v1: prj_chat_v1, after ment_arch_basic, 2w
         Chat-v2: prj_chat_v2, after prj_chat_v1, 2w
-        CRUD: prj_crud, after prj_chat_v2, 5w
+        CRUD: prj_crud, after prj_chat_v2, 4w
         Chat-v3: prj_chat_v3, after ment_sql, 4w
-        OOP-Biblioteca: prj_lib, after prj_chat_v3, 3w
+        Library: prj_lib, after prj_chat_v3, 4w
         TCC: prj_tcc, after prj_lib, 6w
     section Equipe Plataforma
         Entrevista: behave_eval_final, after prj_tcc, 2w
