@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  lb:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./etc/nginx.conf:/etc/nginx/nginx.conf
+
+  registry:
+    build: ./registry-service
+    depends_on:
+      - db      
+  
+  content:
+    build: ./content-service
+    depends_on:
+      - db
+      - registry-service
+
+  question:
+    build: ./question-service
+    depends_on:
+      - db
+      - registry-service
+      - content-service
+  
+  progress:
+    build: ./progress-service
+    depends_on:
+      - db
+      - registry-service
+      - content-service
+      - question-service
+  
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: journey
+      POSTGRES_PASSWORD: J0urn3y
+      POSTGRES_DB: journey
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
