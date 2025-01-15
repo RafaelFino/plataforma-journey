@@ -7,7 +7,6 @@ class StudentDomain:
         self.Email = email
         self.Passwords = []
         self.CreatedAt = datetime.now()
-        self.UpdatedAt = datetime.now()
         self.Active = True
 
     def to_json(self):
