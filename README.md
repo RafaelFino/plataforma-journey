@@ -249,7 +249,7 @@ classDiagram
     class ContentDomain {
         + string StudentID
         + string ModuleID
-        + int Completed
+        + int Completed // percentage
         + datetime CreatedAt
         + ToJson() string
     }
@@ -277,7 +277,7 @@ erDiagram
         string ContentID
         string SudentID
         string ModuleID
-        int Completed // percent    
+        int Completed
     }
 
     Question {
