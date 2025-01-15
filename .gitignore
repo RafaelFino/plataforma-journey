@@ -169,3 +169,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# .venv
+# Virtual Environment
+# https://virtualenv.pypa.io/en/latest/
+#
+# If you are working with Python and don't want to check these files into version control,
+# consider using `virtualenv` to create isolated Python environments.
+#
+.venv/
