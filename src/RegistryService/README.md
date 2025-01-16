@@ -6,7 +6,7 @@ classDiagram
         + string ID
         + string Name
         + string Email
-        + List<PasswordDomain> Passwords
+        + string ExternalToken
         + datetime CreatedAt
         + datetime UpdatedAt
         + bool Active
@@ -42,17 +42,9 @@ erDiagram
         string Name
         string Email
         datetime CreatedAt
-        datetime UpdatedAt
+        string Token
         bool Active
     }
-
-    Password {
-        string StudentID
-        string Hash
-        datetime CreatedAt
-    }
-
-    Student ||--|{ Password : contains
 
     LoginResult {
         string StudentID

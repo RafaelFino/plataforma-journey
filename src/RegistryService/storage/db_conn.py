@@ -23,12 +23,20 @@ class database_conn:
             self.conn.close()
             self.cursor.close()
             print("Database connection closed")
-
-    def execute_query(self, query):
+       
+    def execute_query(self, query, values = None):
         try:
-            self.cursor.execute(query)
+            self.cursor.execute(query, values)
             self.conn.commit()
             return self.cursor.fetchall()
+        except psycopg2.DatabaseError as e:
+            print(f"Error {e}")
+            return None
+        
+    def execute(self, query, values = None):
+        try:
+            self.cursor.execute(query, values)
+            self.conn.commit()
         except psycopg2.DatabaseError as e:
             print(f"Error {e}")
             return None
